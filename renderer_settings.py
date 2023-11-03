@@ -7,6 +7,6 @@ CAMERA_DISTANCE = 2.25
 ANGLE_OF_VIEW = 53.962828459664856
 
 # Lighting.
-DIR_LIGHT = (0, 1 / (2 ** 0.5), 2 ** 0.5)
+DIR_LIGHT = (0, 1 / (2**0.5), 2**0.5)
 DIF_INT = 0.7
 AMB_INT = 0.7

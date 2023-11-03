@@ -29,7 +29,6 @@ def gen_rotation_matrix_from_cam_pos(xyz, in_plane=0.0):
     return R_in_plane @ R
 
 
-
 def gen_rotation_matrix_from_azim_elev_in_plane(
     azimuth=0.0, elevation=0.0, in_plane=0.0
 ):
@@ -115,7 +114,7 @@ def parse_obj_file(input_obj):
     max_pos_vec = max_vec - min_vec
     max_pos_val = max(max_pos_vec)
     max_pos_vec_norm = max_pos_vec / max_pos_val
-    for (sub_obj, packed_array) in packed_arrays.items():
+    for sub_obj, packed_array in packed_arrays.items():
         # z-coordinate of texture is always zero (if present).
         packed_array = np.stack(packed_array)[:, :8]
         original_vertices = packed_array[:, :3].copy()
@@ -635,7 +634,7 @@ class Renderer:
     def set_params(self, params):
         ypr_params = {}
         ae_params = {}
-        for (param, value) in params.items():
+        for param, value in params.items():
             if param in self.prog:
                 self.prog[param].value = value
             elif param == "aov":
